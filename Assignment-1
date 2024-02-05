@@ -1,0 +1,24 @@
+
+# Task 1: Collecting user information
+print("Please enter your personal info:")
+
+name = input("Name: ")
+birthday = input("Birthday (MM/DD/YYYY): ")
+major = input("Major: ")
+favorite_color = input("Favorite Color: ")
+movies = input("Favorite Movies (separated by commas): ")
+
+# Task 2: Saving the information to a file
+with open('userinfo.txt', 'w') as file:
+    file.write(f"Name: {name}\n")
+    file.write(f"Birthday: {birthday}\n")
+    file.write(f"Major: {major}\n")
+    file.write(f"Favorite Color: {favorite_color}\n")
+    file.write(f"List of Movies: {movies}\n")
+
+# Read the information back from the file and display it
+with open('userinfo.txt', 'r') as file:
+    user_info = file.read()
+
+print("\n your information:")
+print(user_info)
